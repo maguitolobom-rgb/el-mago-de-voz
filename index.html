@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="El Mago de Voz - Juan Carlos Puig. Imitaciones y voces originales en TikTok.">
+<meta name="description" content="El Mago de Voz - Juan Carlos Puig. Selección de mejores TikToks.">
 <title>El Mago de Voz | Mis mejores TikToks</title>
 
 <style>
 :root {
-    --negro: #050505;
-    --negro2: #111111;
-    --dorado: #d4af37;
-    --dorado-claro: #f0d477;
-    --blanco: #ffffff;
-    --gris: #bdbdbd;
+    --black: #050505;
+    --black2: #111111;
+    --gold: #d4af37;
+    --gold2: #f0d477;
+    --white: #ffffff;
+    --gray: #bdbdbd;
 }
 
 * {
@@ -23,8 +23,8 @@
 }
 
 body {
-    background: var(--negro);
-    color: var(--blanco);
+    background: var(--black);
+    color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
@@ -35,24 +35,478 @@ a {
 }
 
 .hero {
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     padding: 50px 20px;
-    background:
-        radial-gradient(circle at top, #29200b 0%, #0b0b0b 45%, #050505 100%);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+    text-align: center;
+    background: radial-gradient(circle at top, #29200b 0%, #0b0b0b 45%, #050505 100%);
+    border-bottom: 1px solid rgba(212,175,55,.45);
 }
 
 .hero-content {
     max-width: 900px;
-    width: 100%;
+    margin: auto;
 }
 
 .hero-photo {
     width: 210px;
     height: 210px;
     margin: 0 auto 25px;
-    border-radius:
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--gold);
+    box-shadow: 0 0 35px rgba(212,175,55,.35);
+    background: #171717;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 8vw, 76px);
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.voice-box {
+    margin: 55px auto 45px;
+    padding: 28px 22px;
+    text-align: center;
+    border: 1px solid var(--gold);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #151515, #090909);
+    box-shadow: 0 10px 35px rgba(0,0,0,.4);
+}
+
+.voice-box strong {
+    display: block;
+    color: var(--gold2);
+    font-size: clamp(21px, 4vw, 32px);
+    margin-bottom: 12px;
+}
+
+.voice-box span {
+    display: block;
+    font-size: 16px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 30px 0 12px;
+}
+
+.section-title h2 {
+    color: var(--gold);
+    font-size: clamp(30px, 6vw, 50px);
+    letter-spacing: 2px;
+}
+
+.section-title p {
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 35px 0 65px;
+}
+
+.card {
+    background: var(--black2);
+    border: 1px solid #292929;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 210px;
+    background: #080808;
+}
+
+.photos img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: var(--gold2);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tiktok-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tiktok {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 30px;
+    background: var(--gold);
+    color: #050505;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tiktok:hover {
+    background: var(--gold2);
+}
+
+.more {
+    text-align: center;
+    margin: 20px auto 70px;
+}
+
+.more a {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold2);
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+footer {
+    border-top: 1px solid #292929;
+    text-align: center;
+    padding: 35px 20px;
+    color: var(--gray);
+}
+
+footer strong {
+    display: block;
+    color: var(--gold);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-photo {
+        width: 175px;
+        height: 175px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .photos,
+    .photos img {
+        height: 230px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+
+        <div class="hero-photo">
+            <img src="images/juan-carlos-hero.jpg"
+                 alt="Juan Carlos Puig cantando con micrófono">
+        </div>
+
+        <h1>EL MAGO DE VOZ</h1>
+        <h2>Juan Carlos Puig</h2>
+
+        <p>
+            Una selección de algunos de mis mejores TikToks,
+            interpretando grandes voces de la música internacional.
+        </p>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="voice-box">
+        <strong>TODAS LAS VOCES QUE ESCUCHAS SON MI VOZ ORIGINAL</strong>
+        <span>
+            NO HAY INTELIGENCIA ARTIFICIAL.
+            ES LA VOZ REAL DE EL MAGO DE VOZ.
+        </span>
+    </section>
+
+    <section class="section-title">
+        <h2>MIS MEJORES TIKTOKS</h2>
+        <p>
+            Una muestra de algunas de las voces que forman parte de mi repertorio.
+        </p>
+    </section>
+
+    <section class="cards">
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-01.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/elvis-presley.jpg" alt="Elvis Presley">
+            </div>
+            <div class="card-info">
+                <h3>Elvis Presley</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxNTYm/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxeJVq/" target="_blank" rel="noopener noreferrer">VER OTRO TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-02.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/louis-armstrong.jpg" alt="Louis Armstrong">
+            </div>
+            <div class="card-info">
+                <h3>Louis Armstrong</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwXNxyQ/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-03.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/bee-gees.jpg" alt="Bee Gees">
+            </div>
+            <div class="card-info">
+                <h3>Bee Gees</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxddf1/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-04.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/eros-ramazzotti.jpg" alt="Eros Ramazzotti">
+            </div>
+            <div class="card-info">
+                <h3>Eros Ramazzotti</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwHbkLV/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-05.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/emmanuel.jpg" alt="Emmanuel">
+            </div>
+            <div class="card-info">
+                <h3>Emmanuel</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwHESE7/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-06.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/pablo-abraira.jpg" alt="Pablo Abraira">
+            </div>
+            <div class="card-info">
+                <h3>Pablo Abraira</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwH7UuN/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-07.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/braulio.jpg" alt="Braulio">
+            </div>
+            <div class="card-info">
+                <h3>Braulio</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqw91LcW/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-08.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/jose-luis-perales.jpg" alt="José Luis Perales">
+            </div>
+            <div class="card-info">
+                <h3>José Luis Perales</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqw9yshc/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-09.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/neil-sedaka.jpg" alt="Neil Sedaka">
+            </div>
+            <div class="card-info">
+                <h3>Neil Sedaka</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqw99TDS/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-10.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/rudy-la-scala.jpg" alt="Rudy La Scala">
+            </div>
+            <div class="card-info">
+                <h3>Rudy La Scala</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwQkG5a/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-11.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/camilo-sesto.jpg" alt="Camilo Sesto">
+            </div>
+            <div class="card-info">
+                <h3>Camilo Sesto</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxQ57V/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxUVJv/" target="_blank" rel="noopener noreferrer">VER OTRO TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-12.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/salvatore-adamo.jpg" alt="Salvatore Adamo">
+            </div>
+            <div class="card-info">
+                <h3>Salvatore Adamo</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxUNxE/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-13.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/miguel-gallardo.jpg" alt="Miguel Gallardo">
+            </div>
+            <div class="card-info">
+                <h3>Miguel Gallardo</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxUKow/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-14.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/raphael.jpg" alt="Raphael">
+            </div>
+            <div class="card-info">
+                <h3>Raphael</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwxS3VA/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-15.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/dyango.jpg" alt="Dyango">
+            </div>
+            <div class="card-info">
+                <h3>Dyango</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwQRRdN/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="photos">
+                <img src="images/juan-carlos-16.jpg" alt="Juan Carlos Puig cantando">
+                <img src="images/dire-straits.jpg" alt="Dire Straits">
+            </div>
+            <div class="card-info">
+                <h3>Dire Straits</h3>
+                <div class="tiktok-buttons">
+                    <a class="tiktok" href="https://vt.tiktok.com/ZSqwQNYYp/" target="_blank" rel="noopener noreferrer">VER EN TIKTOK</a>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="more">
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+            VER MÁS VÍDEOS EN TIKTOK
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <strong>EL MAGO DE VOZ</strong>
+    <p>Juan Carlos Puig</p>
+    <p>Más de 40 años sobre los escenarios</p>
+</footer>
+
+</body>
+</html>
