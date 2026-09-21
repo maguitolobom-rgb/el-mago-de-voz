@@ -508,5 +508,10 @@ footer strong {
     <p>Más de 40 años sobre los escenarios</p>
 </footer>
 
+<script>
+document.querySelectorAll('img[src^="images/"]').forEach(img => {
+    img.src = img.src.replace('images/', '');
+});
+    </script>
 </body>
 </html>
